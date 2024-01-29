@@ -1,15 +1,22 @@
-// Оголоси функцію formatMessage(message, maxLength), яка приймає рядок(параметр message) 
-// та перевіряє його довжину відповідно до заданої максимальної довжини(параметр maxLength).
-// Якщо довжина рядка дорівнює або менша за maxLength, то функція повертає початковий рядок без змін.
-// Якщо довжина перевищує maxLength, то функція обрізає рядок до maxLength символів,
-// додає трикрапку "..." в кінці та повертає обрізану версію.
+/**
+ * Оголоси функцію formatMessage(message, maxLength), яка приймає рядок(параметр message)
+ * та перевіряє його довжину відповідно до заданої максимальної довжини(параметр maxLength).
+ * Якщо довжина рядка дорівнює або менша за maxLength, то функція повертає початковий рядок без змін.
+ * Якщо довжина перевищує maxLength, то функція обрізає рядок до maxLength символів,
+ * додає трикрапку "..." в кінці та повертає обрізану версію.
+*/
+
+
+/** Improvments */
 
 function formatMessage(message, maxLength) {
-if (message.length <= maxLength) 
-{return message}
-else (message.length > maxLength) 
-    { return `${message.slice(0, maxLength)}...`}
+    if (message.length <= maxLength) {
+        return message;
+    } else { 
+        return `${message.slice(0, maxLength)}...`;
+    }
 }
+
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); // "Curabitur ligula..."
 console.log(formatMessage("Curabitur ligula sapien", 23)); // "Curabitur ligula sapien"
